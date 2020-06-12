@@ -36,8 +36,14 @@ class BatteryGUI():
         #CPU Widget
         self.label_cpu=Label(self.gui, text='CPU: ', fg='black', font="none 16 bold underline").grid(row=2, column=0, pady=15, sticky=W)
         self.label_cpu_data=Label(self.gui, text='N/A', fg='red', font="none 16 bold").grid(row=2, column=1, sticky=E)
+        #RAM Widget
+        self.label_ram=Label(self.gui, text='RAM: ', fg='black', font='non 16 bold underline').grid(row=3, column=0, pady=15, sticky=W)
+        self.label_ram_data=Label(self.gui, text='N/A', fg='red', font='none 16 bold').grid(row=3, column=1, sticky=E)
+        #GPU Widget
+        self.label_gpu = Label(self.gui, text='GPU: ', fg='black', font='non 16 bold underline').grid(row=3, column=0,pady=15, sticky=W)
+        self.label_gpu_data = Label(self.gui, text='N/A', fg='red', font='none 16 bold').grid(row=3, column=1, sticky=E)
         #spacer
-        self.label_filler = Label(self.gui, bg='white').grid(row=2, column=0, pady=0)
+        #self.label_filler = Label(self.gui, bg='white').grid(row=2, column=0, pady=0)
         #Light Mode/Dark Mode Buttons(not definititive)
         #self.but_dark = Button(self.gui, text='Dark',command=lambda: [self.gui.configure(bg='dimgrey'), self.darkMode()]).grid(row=3,column=0)
         #self.but_light = Button(self.gui, text='Light',command=lambda: [self.gui.configure(bg='white'), self.filler_wht()]).grid(row=3,column=1)
