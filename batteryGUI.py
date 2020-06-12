@@ -21,7 +21,7 @@ class BatteryGUI():
     def __init__(self):
         self.gui = Tk()
         self.gui.configure(bg='white')
-        self.gui.title("PowerBoi")
+        self.gui.title("Mac > PC")
         self.gui.geometry("230x400")
         self.gui.resizable(0, 0)
         self.icon = PhotoImage(file="icon.png")
