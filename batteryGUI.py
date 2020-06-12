@@ -21,8 +21,8 @@ class BatteryGUI():
     def __init__(self):
         self.gui = Tk()
         self.gui.configure(bg='white')
-        self.gui.title("PowerBoi 9000")
-        self.gui.geometry("300x400")
+        self.gui.title("PowerBoi")
+        self.gui.geometry("230x400")
         self.gui.resizable(0, 0)
         self.icon = PhotoImage(file="icon.png")
         self.gui.iconphoto(False, self.icon)
