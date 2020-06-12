@@ -2,7 +2,7 @@ import psutil
 import pprint
 
 
-class QueryBatteries():
+class Batteries():
 
     def __init__(self):
         pass
@@ -13,7 +13,25 @@ class QueryBatteries():
 
         print(type(bat))
 
+class CPU():
 
+    def __init__(self):
+        pass
+
+class RAM():
+
+    def __init__(self):
+        pass
+
+class DISK():
+
+    def __init__(self):
+        pass
+
+class NET():
+
+    def __init__(self):
+        pass
 
 if __name__ == '__main__':
 
