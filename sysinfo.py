@@ -13,15 +13,26 @@ class Batteries():
 
         print(type(bat))
 
-class CPU():
+class CPU:
 
     def __init__(self):
         pass
+
+    def get_cpu(self):
+        x = psutil.cpu_percent()
+        float(x)
+        return x
+
 
 class RAM():
 
     def __init__(self):
         pass
+
+    def get_RAM(self):
+        x=psutil.virtual_memory()
+
+
 
 class DISK():
 
