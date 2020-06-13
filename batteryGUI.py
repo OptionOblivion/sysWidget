@@ -29,23 +29,29 @@ class BatteryGUI():
 
         # battery percentage widget
         self.label_life = Label(self.gui, text='Percentage:', fg="black",font="none 16 bold underline").grid(row=0,column=0,pady=15, sticky=W)
-        self.label_percentage = Label(self.gui, text='N/A', fg="red", font="none 16 bold").grid(row=0, column=1,sticky=E)
+        self.label_percentage = Label(self.gui, text='N/A', fg="red", font="none 16 bold").grid(row=0, column=0,sticky=E)
         #Time Remaining Widget
         self.label_time = Label(self.gui, text='Time Remaining: ', fg="black", bg="white",font="none 16 bold underline").grid(row=1, column=0, pady=15,sticky=W)
-        self.label_hours = Label(self.gui, text='N/A', fg="red", font="none 16 bold").grid(row=1, column=1, sticky=E)
+        self.label_hours = Label(self.gui, text='N/A', fg="red", font="none 16 bold").grid(row=1, column=0, sticky=E)
         #CPU Widget
         self.label_cpu=Label(self.gui, text='CPU: ', fg='black', font="none 16 bold underline").grid(row=2, column=0, pady=15, sticky=W)
-        self.label_cpu_data=Label(self.gui, text='N/A', fg='red', font="none 16 bold").grid(row=2, column=1, sticky=E)
+        self.label_cpu_data=Label(self.gui, text='N/A', fg='red', font="none 16 bold").grid(row=2, column=0, sticky=E)
         #RAM Widget
         self.label_ram=Label(self.gui, text='RAM: ', fg='black', font='non 16 bold underline').grid(row=3, column=0, pady=15, sticky=W)
-        self.label_ram_data=Label(self.gui, text='N/A', fg='red', font='none 16 bold').grid(row=3, column=1, sticky=E)
+        self.label_ram_data=Label(self.gui, text='N/A', fg='red', font='none 16 bold').grid(row=3, column=0, sticky=E)
         #GPU Widget
         self.label_gpu = Label(self.gui, text='GPU: ', fg='black', font='non 16 bold underline').grid(row=4, column=0,pady=15, sticky=W)
-        self.label_gpu_data = Label(self.gui, text='N/A', fg='red', font='none 16 bold').grid(row=4, column=1, sticky=E)
+        self.label_gpu_data = Label(self.gui, text='N/A', fg='red', font='none 16 bold').grid(row=4, column=0, sticky=E)
         #spacer
         self.label_filler = Label(self.gui, bg='white').grid(row=5, column=0, pady=10)
         #Refresh button
-        self.refresh = Button(self.gui, text='Refresh').grid(row=6,column=1,sticky=SW)
+        self.refresh = Button(self.gui, text='Refresh').grid(row=6,column=0, sticky=SE)
+        footer = PhotoImage(file="footer.gif")
+        label_footer = Label(self.gui, image=footer)
+        label_footer.image=footer
+        label_footer.grid(row=7, column=0, sticky=S, pady=10)
+
+
         #Light Mode/Dark Mode Buttons(not definititive)
         #self.but_dark = Button(self.gui, text='Dark',command=lambda: [self.gui.configure(bg='dimgrey'), self.darkMode()]).grid(row=3,column=0)
         #self.but_light = Button(self.gui, text='Light',command=lambda: [self.gui.configure(bg='white'), self.filler_wht()]).grid(row=3,column=1)
