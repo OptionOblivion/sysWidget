@@ -30,7 +30,9 @@ class RAM():
         pass
 
     def get_RAM(self):
-        x=psutil.virtual_memory()
+        ram=psutil.virtual_memory()
+        total = ram.total >> 30
+        return total
 
 
 
