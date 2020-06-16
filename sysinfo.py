@@ -33,8 +33,8 @@ class RAM():
 
     def get_RAM(self):
         ram=psutil.virtual_memory()
-        total = ram.total >> 30
-        return total
+        total = (ram.free >> 30)
+        return float(total)
 
 
 class DISK():
@@ -53,5 +53,5 @@ class NET():
 
 if __name__ == '__main__':
 
-    q = QueryBatteries()
+    #q = QueryBatteries()
     q._getBatteries()
