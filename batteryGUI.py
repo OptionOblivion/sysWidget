@@ -31,8 +31,8 @@ class BatteryGUI(CPU,RAM, Batteries):
         self.label_life = Label(self.gui, text='Percentage:', fg="black",font="none 16 bold underline").grid(row=0,column=0,pady=15, sticky=W)
         self.label_percentage = Label(self.gui, text=bat, fg="red", font="none 16 bold").grid(row=0, column=0,sticky=E)
         #Time Remaining Widget
-        self.label_time = Label(self.gui, text='Time Remaining: ', fg="black",font="none 16 bold underline").grid(row=1, column=0, pady=15,sticky=W)
-        self.label_hours = Label(self.gui, text='N/A', fg="red", font="none 16 bold").grid(row=1, column=0, sticky=E)
+        self.label_time = Label(self.gui, text='------', fg="black",font="none 16 bold underline").grid(row=1, column=0, pady=15,sticky=W)
+        self.label_hours = Label(self.gui, text='-----', fg="red", font="none 16 bold").grid(row=1, column=0, sticky=E)
         #CPU Widget
         x=CPU.get_cpu(self)
         self.label_cpu=Label(self.gui, text='CPU: ', fg='black', font="none 16 bold underline").grid(row=2, column=0, pady=15, sticky=W)
