@@ -10,8 +10,10 @@ class Batteries():
     def _getBatteries(self):
 
         bat = psutil.sensors_battery()
-
-        print(type(bat))
+        if (bat=='true'):
+            print(type(bat))
+        else:
+            return '---'
 
 class CPU:
 

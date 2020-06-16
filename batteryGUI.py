@@ -14,7 +14,7 @@ class SysinfoThread():
             pass
 
 
-class BatteryGUI(CPU,RAM):
+class BatteryGUI(CPU,RAM, Batteries):
     """Class that contains the GUI. Possible problem is the extra thread will make this class be a global var, which breaks OOP """
 
     def __init__(self):
@@ -27,8 +27,9 @@ class BatteryGUI(CPU,RAM):
         self.gui.iconphoto(False, self.icon)
 
         # battery percentage widget
+        bat = Batteries._getBatteries(self)
         self.label_life = Label(self.gui, text='Percentage:', fg="black",font="none 16 bold underline").grid(row=0,column=0,pady=15, sticky=W)
-        self.label_percentage = Label(self.gui, text='N/A', fg="red", font="none 16 bold").grid(row=0, column=0,sticky=E)
+        self.label_percentage = Label(self.gui, text=bat, fg="red", font="none 16 bold").grid(row=0, column=0,sticky=E)
         #Time Remaining Widget
         self.label_time = Label(self.gui, text='Time Remaining: ', fg="black",font="none 16 bold underline").grid(row=1, column=0, pady=15,sticky=W)
         self.label_hours = Label(self.gui, text='N/A', fg="red", font="none 16 bold").grid(row=1, column=0, sticky=E)
