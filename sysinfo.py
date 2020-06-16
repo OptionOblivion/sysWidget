@@ -37,11 +37,14 @@ class RAM():
         return total
 
 
-
 class DISK():
 
     def __init__(self):
         pass
+
+    def get_disk(self):
+        disk=psutil.disk_usage('/')
+        return (int(disk.free/(2**30)),'GB')
 
 class NET():
 

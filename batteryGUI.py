@@ -20,9 +20,9 @@ class BatteryGUI(CPU,RAM, Batteries):
     def __init__(self):
         self.gui = Tk()
         self.gui.configure(bg='white')
-        self.gui.title("Mac > PC")
+        self.gui.title("Stat Widg")
         self.gui.geometry("230x400")
-        self.gui.resizable(0, 0)
+        #self.gui.resizable(0, 0)
         self.icon = PhotoImage(file="icon.png")
         self.gui.iconphoto(False, self.icon)
 
@@ -41,9 +41,10 @@ class BatteryGUI(CPU,RAM, Batteries):
         ram=RAM.get_RAM(self)
         self.label_ram=Label(self.gui, text='RAM: ', fg='black', font='non 16 bold underline').grid(row=3, column=0, pady=15, sticky=W)
         self.label_ram_data=Label(self.gui, text=(ram,'GB'), fg='red', font='none 16 bold').grid(row=3, column=0, sticky=E)
-        #GPU Widget
-        self.label_gpu = Label(self.gui, text='GPU: ', fg='black', font='non 16 bold underline').grid(row=4, column=0,pady=15, sticky=W)
-        self.label_gpu_data = Label(self.gui, text='N/A', fg='red', font='none 16 bold').grid(row=4, column=0, sticky=E)
+        #Disk Widget
+        disk=DISK.get_disk(self)
+        self.label_disk = Label(self.gui, text='DISK: ', fg='black', font='non 16 bold underline').grid(row=4, column=0,pady=15, sticky=W)
+        self.label_disk_data = Label(self.gui, text=disk, fg='red', font='none 16 bold').grid(row=4, column=0, sticky=E)
         #spacer
         self.label_filler = Label(self.gui, bg='white').grid(row=5, column=0, pady=10)
         #Refresh button- need to program command to refresh data
