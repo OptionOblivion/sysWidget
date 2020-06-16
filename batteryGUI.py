@@ -22,7 +22,7 @@ class BatteryGUI(CPU,RAM, Batteries):
         self.gui.configure(bg='white')
         self.gui.title("Stat Widg")
         self.gui.geometry("230x400")
-        #self.gui.resizable(0, 0)
+        self.gui.resizable(0, 0)
         self.icon = PhotoImage(file="icon.png")
         self.gui.iconphoto(False, self.icon)
 
@@ -54,25 +54,6 @@ class BatteryGUI(CPU,RAM, Batteries):
         label_footer = Label(self.gui, image=footer)
         label_footer.image=footer
         label_footer.grid(row=7, column=0, sticky=S, pady=10)
-
-
-        #Light Mode/Dark Mode Buttons(not definititive)
-        #self.but_dark = Button(self.gui, text='Dark',command=lambda: [self.gui.configure(bg='dimgrey'), self.darkMode()]).grid(row=3,column=0)
-        #self.but_light = Button(self.gui, text='Light',command=lambda: [self.gui.configure(bg='white'), self.filler_wht()]).grid(row=3,column=1)
-
-    #def darkMode(self):
-        #self.filler = Label(self.gui, bg='dimgrey').grid(row=2, column=0, pady=140)
-        #self.percent_dark = Label(self.gui, text='Percentage:', fg='white', bg='dimgrey',
-                                  #font="none 16 bold underline").grid(row=0, column=0, sticky=W)
-       # self.time_dark = Label(self.gui, text='Time Remaining:', fg="white", bg="dimgrey",
-                               #font="none 16 bold underline").grid(row=1, column=0, sticky=W)
-
-    #def filler_wht(self):
-        #self.fillWhite = Label(self.gui, bg='white').grid(row=2, column=0, pady=140)
-       # self.percent_light = Label(self.gui, text='Percentage:', fg='black', bg='white',
-                                  # font="none 16 bold underline").grid(row=0, column=0, sticky=W)
-        #self.time_light = Label(self.gui, text='Time Remaining:', fg="black", bg="white",
-                               # font="none 16 bold underline").grid(row=1, column=0, sticky=W)
 
     def run(self):
         self.gui.mainloop()
